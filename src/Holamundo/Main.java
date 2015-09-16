@@ -5,7 +5,9 @@
  */
 package Holamundo;
 
-import java.util.Date;
+import java.util.Calendar;
+//import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -17,7 +19,12 @@ public class Main {
         System.out.println("Hola mundo");
         
         Person p1;
-        p1 = new Person ("Miguel", "Gonzalez Villa", new Date (94, 10, 16));
+        
+        Calendar f1;
+        f1 = GregorianCalendar.getInstance();
+        f1.set(1994, 10, 16);
+        
+        p1 = new Person ("Miguel", "Gonzalez Villa", f1);
         System.out.println(p1.getBirthday());
         System.out.println(p1.getFullName());
         System.out.println(p1.getAge());
