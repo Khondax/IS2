@@ -11,21 +11,17 @@ import java.util.HashMap;
  *
  * @author Khondax
  */
-public class Histogram {
+public class Histogram <T> {
     
-    private final int[] array;
+    private final T[] array;
 
-    public Histogram(int[] array) {
+    public Histogram(T[] array) {
         this.array = array;
     }
-
-    public int[] getArray() {
-        return array;
-    }
     
-    public HashMap<Integer, Integer> getHisto (){
+    public HashMap<T, Integer> getHisto (){
         
-        HashMap<Integer, Integer> histogram = new HashMap<>();
+        HashMap<T, Integer> histogram = new HashMap<>();
         
         for (int i = 0; i < array.length; i++) {
             if (!histogram.containsKey(array[i])){
