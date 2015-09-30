@@ -14,13 +14,14 @@ import java.util.HashMap;
 public class Kata {
     
     public static void main(String[] args) {
-        int [] vector = {1,1,1,1,4,4,2,2,2,100};
+        Integer [] vector = {1,1,1,1,4,4,2,2,2,100};
         
         String[] vector1 = {"Ana", "Juan", "Pedro", "Ana", "Juan", "Ana"};
         
-        Histogram mihisto = new Histogram (vector1);
+        Histogram mihisto = new Histogram (vector);
+        Histogram mihisto2 = new Histogram (vector1);
         
         System.out.println(mihisto.getHisto());
-        
+        System.out.println(mihisto2.getHisto());
     }
 }
