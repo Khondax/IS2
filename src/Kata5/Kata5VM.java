@@ -18,8 +18,15 @@ import java.sql.Statement;
 public class Kata5VM {
     public static void main(String[] args) throws SQLException, ClassNotFoundException, FileNotFoundException, IOException {
         
-        Class.forName("org.sqlite.JDBC");
-        Connection conec = DriverManager.getConnection("jdbc:sqlite:Kata5");
+        //Class.forName("org.sqlite.JDBC");
+        //Connection conec = DriverManager.getConnection("jdbc:sqlite:Kata5");
+
+        
+        //Class.forName("org.oracle.driver.OracleDriver");
+        
+        DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+
+        Connection conec = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "system", "orcl");
         
         Statement stat = conec.createStatement();
         
