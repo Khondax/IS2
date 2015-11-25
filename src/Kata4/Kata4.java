@@ -15,7 +15,7 @@ public class Kata4 {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
-        
+        /*
         String nameFile = "E:\\Mis documentos\\Miguel\\Universidad\\Asignaturas\\IS2\\DATA\\emaildata.txt";
         
         ArrayList<String> mailArray = MailListReader.reader(nameFile);
@@ -23,9 +23,9 @@ public class Kata4 {
         Histogram<String> histo = MailHistogramBuilder.build(mailArray);
         
         new HistogramDisplay(histo).execute();
+        */
         
         
-        /*
         String path = "E:\\Mis documentos\\Miguel\\Universidad\\Asignaturas";
         File file = new File (path);
         
@@ -53,7 +53,7 @@ public class Kata4 {
         
         input.close();
         output.flush();
-        output.close();*/
+        output.close();
         
        /* 
       //  print(file.listFiles(), "");
