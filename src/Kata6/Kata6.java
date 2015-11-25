@@ -19,11 +19,11 @@ public class Kata6 {
         
         String nameFile = "E:\\Mis documentos\\Miguel\\Universidad\\Asignaturas\\IS2\\DATA\\emaildata.txt";
         
-        ArrayList<String> mailArray = MailListReader.reader(nameFile);
+        ArrayList<Person> mailArray = MailListReader.reader(nameFile);
         
-        Histogram<String> histo = MailHistogramBuilder.build(mailArray);
+        //Histogram<String> histo = MailHistogramBuilder.build(mailArray);
         
-        new HistogramDisplay(histo).execute();
+        //new HistogramDisplay(histo).execute();
         
         System.out.println("Fin");
     }
