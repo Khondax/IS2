@@ -16,7 +16,7 @@ public class CalculateCommand implements Command{
     private final PopulationDialog populationDialog;
     private final HistogramDisplay display;
 
-    public CalculateCommand(AttributeDialog attributeDialog, PopulationDialog populationDialog, HIstogramDisplay display) {
+    public CalculateCommand(AttributeDialog attributeDialog, PopulationDialog populationDialog, HistogramDisplay display) {
         this.attributeDialog = attributeDialog;
         this.populationDialog = populationDialog;
         this.display = display;
