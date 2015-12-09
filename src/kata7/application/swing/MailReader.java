@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MailReader {
 
-    public static List<Person> read(String filename) throws FileNotFoundException, IOException {
+    public static List<Person> read (String filename) throws FileNotFoundException, IOException {
         List<Person> mailList = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(new File(filename)))) {
             String mail;
