@@ -1,5 +1,6 @@
 package kata7.application.swing;
 
+import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import kata7.model.Histogram;
 import kata7.view.HistogramDisplay;
@@ -14,6 +15,26 @@ public class HistogramPanel extends JPanel implements HistogramDisplay {
 
     private Histogram<String> histogram;
 
+    public HistogramPanel() {
+        super(new BorderLayout());
+    }
+
+    @Override
+    public Histogram histogram() {
+        return histogram;
+    }
+
+    @Override
+    public void show(Histogram histogram) {
+        this.histogram = histogram;
+        this.reload();
+    }
+    
+    private void reload() {
+        this.removeAll();
+        this.add(new ChartPanel(createChart(createDataset(histogram))));
+        this.revalidate();
+    }
 
     private JFreeChart createChart(DefaultCategoryDataset dataSet) {
         JFreeChart chart = ChartFactory.createBarChart(
@@ -37,14 +58,5 @@ public class HistogramPanel extends JPanel implements HistogramDisplay {
 
     }
 
-    @Override
-    public Histogram histogram() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void show(Histogram histogram) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }
